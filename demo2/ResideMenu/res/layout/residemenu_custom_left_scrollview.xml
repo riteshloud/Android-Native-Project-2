@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@android:color/background_dark">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/ln_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:src="@drawable/close_new" />
+
+            <TextView
+                android:id="@+id/tv_menu_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/iv_close"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:text="Menu"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_layout"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_langauge_spinner"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/languageFlag"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="#FFFFFF" />
+
+            <!--<ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />-->
+
+            <Spinner
+                android:id="@+id/sp_SelectLanguage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:dropDownWidth="match_parent"
+                android:gravity="center"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@android:color/white"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/sv_left_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:layout_alignParentLeft="true"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/profile_photo_stroke">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfilePhoto"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/user_empty" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Jason Lim"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvRank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Investor"
+                android:textAllCaps="false"
+                android:textColor="#00DDF9"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Online"
+                android:textAllCaps="false"
+                android:textColor="#6DD400"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/ivSettings"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/settings_new" />
+
+                    <ImageView
+                        android:id="@+id/ivMessage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivSettings"
+                        android:src="@drawable/message_new" />
+
+                    <ImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivMessage"
+                        android:src="@drawable/user_new" />
+
+                    <ImageView
+                        android:id="@+id/ivLogout"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivProfile"
+                        android:src="@drawable/logout_new" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dash_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_dashboard_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/dashboard_selected_nav_new" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Dashboard"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewProfile"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_sidemenu_dash_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_profile_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_my_profile_nav_main"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/my_profile_selected_new" />
+
+                <TextView
+                    android:id="@+id/tv_my_profile_nav_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="My Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_network_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewMyNetwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_my_network_nav_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_my_network_nav_main"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/my_network_selected_nav_new" />
+
+                    <TextView
+                        android:id="@+id/tv_my_network_nav_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="My Network"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_my_network_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:rotation="90"
+                        android:src="@drawable/ic_arrow_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_network_nav_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_network_tree_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_network_tree_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Network Tree"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_registered_account_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_registered_account_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Register Accounts"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_funding_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewFunding"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_funding_nav_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_funding_nav_main"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/funding_selected_nav_new" />
+
+                    <TextView
+                        android:id="@+id/tv_funding_nav_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="Funding"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_funding_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:rotation="90"
+                        android:src="@drawable/ic_arrow_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_funding_nav_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_topup_fund_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_topup_fund_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Topup Fund"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_buy_package_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_buy_package_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Buy Package"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_capital_withdrawal_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_capital_withdrawal_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Capital Withdrawal"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_earnings_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewEarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_earnings_nav_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_earning_nav_main"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/earnings_selected_nav_new" />
+
+                    <TextView
+                        android:id="@+id/tv_earnings_nav_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="Earnings"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_earnings_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:rotation="90"
+                        android:src="@drawable/ic_arrow_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_earnings_nav_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cash_wallet_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_cash_wallet_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Cash Wallet"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_report_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/report_nav"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_report_nav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Report"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_stock_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/view_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_stock_nav_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_stock_nav_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_stocks_selected" />
+
+                    <TextView
+                        android:id="@+id/tv_stock_nav_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="Stocks"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_stock_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:rotation="90"
+                        android:src="@drawable/ic_arrow_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_stock_nav_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stock_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_stock_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Stock market"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_stock_wallet_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/report_nav"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_stock_wallet_nav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Stock wallet"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_stock_wallet_nav_child_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/report_nav"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_stock_help_faq_nav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="VexStocks+ FAQ"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selftrading_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_selftrading_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/funding_nav" />
+
+                <TextView
+                    android:id="@+id/tv_selftrading_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Self trading"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_withdrawal_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewWithdrawal"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_withdrawal_nav"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/withdrawal_selected_nav_new" />
+
+                    <TextView
+                        android:id="@+id/tv_withdrawal_nav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="Withdrawal"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wallet_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/fund_wallet_nav" />
+
+                <TextView
+                    android:id="@+id/tv_fund_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Fund Wallet"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_commission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:text="Commission"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:text="Withdraw Wallet"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_capital_withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:text="Capital Withdraw"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_network_tree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/network_tree_nav" />
+
+                <TextView
+                    android:id="@+id/tv_network_tree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Network Tree"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_report_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_trading_profit_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Trading Profit"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tv_lot_rebate_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Lot Rebate"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_lot_rebate_commission_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Lot Rebate Commission"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tv_lot_leadership_bonus_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Leadership Bonus"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_profit_sharing_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Profit Sharing"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tv_overriding_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_semibold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Overriding"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_your_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_user_profile"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="12dp"
+                    app:contentPaddingBottom="12dp"
+                    app:contentPaddingLeft="20dp"
+                    app:contentPaddingRight="20dp"
+                    app:contentPaddingTop="12dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/report_nav" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_your_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Your Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_setting_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_setting_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/setting_nav" />
+
+                <TextView
+                    android:id="@+id/tv_settings_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/muli_bold"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Settings"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_news_tools_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewNewsAndTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_news_tools_nav_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_news_tools_nav_main"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/news_tools_selected_new" />
+
+                    <TextView
+                        android:id="@+id/tv_news_tools_nav_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="News &amp; Tools"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_news_tools_right"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|center_vertical"
+
+                        android:rotation="90"
+                        android:src="@drawable/ic_arrow_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_news_event_nav_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_news_event_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_news_event_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="News Event"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_industry_tools_nav_child_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_industry_tools_nav_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center|start"
+                            android:includeFontPadding="false"
+                            android:text="Industry Tools"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_news_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_news_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/news_nav" />
+
+                <TextView
+                    android:id="@+id/tv_news_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="News"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_faq_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewHelpAndFAQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_sidemenu_dash_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_faq_nav"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/help_faq_selected_new" />
+
+                    <TextView
+                        android:id="@+id/tv_faq_nav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:text="Help &amp; FAQ"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewSupport"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_sidemenu_dash_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_support_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_support_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/support_selected_new" />
+
+                <TextView
+                    android:id="@+id/tv_support_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Support"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_logout_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_logout_nav"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/logout_nav_new"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv_logout_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:includeFontPadding="false"
+                    android:text="Logout"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qr_code_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fl_qr_code_nav"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#EBF4F7"
+                        android:padding="2dp"
+                        android:src="@drawable/dummy_dr" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#45ffffff" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="#F7F6F4"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_tap_to_show_qr_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/muli_bold"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:padding="2dp"
+                            android:text="Tap\nto show QR"
+                            android:textColor="#0F0F0F"
+                            android:textSize="8sp" />
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCopyLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    app:cardBackgroundColor="#1DAFBB"
+                    app:cardCornerRadius="3dp"
+                    app:contentPaddingBottom="4dp"
+                    app:contentPaddingLeft="8dp"
+                    app:contentPaddingRight="8dp"
+                    app:contentPaddingTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_click_to_copy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/muli_semibold"
+                        android:maxLines="2"
+                        android:text="Click to copy"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_oryx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Oryx"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_oryx_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Oryx Hotel"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_self_trading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Self Trading"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_kyc_verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="KYC Verification"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_packages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Packages"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_terms_of_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Terms Of Use"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/muli_bold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Privacy Policy"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

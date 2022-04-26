@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.demo2" >
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".view.ui.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning" >
+        <activity
+            android:name=".view.ui.activities.AuthOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashBack" />
+        <activity
+            android:name=".view.ui.activities.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginBack" />
+        <activity
+            android:name=".view.ui.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashBack" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ui.activities.HomeActivity"
+            android:configChanges="locale"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.base.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activities.SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignupBack"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginBack"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activities.PdfViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.demo.navigationdemo.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

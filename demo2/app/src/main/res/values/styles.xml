@@ -1,0 +1,270 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+      </style>
+
+    <style name="LoginBack" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/slate_grey_welcome</item>
+        <item name="android:windowBackground">@drawable/login_back_drw</item>
+
+    </style>
+    <style name="MyDialogThemeInput." parent="Theme.AppCompat.NoActionBar">
+       <item name="android:windowSoftInputMode">adjustNothing</item>
+    </style>
+
+    <style name="RadioButtonStyleOryx" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio_oryx_trade</item>
+    </style>
+
+    <style name="HomeActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorPrimary">@android:color/black</item>
+        -->
+<!--
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+-->
+  <!--      <item name="android:windowTranslucentNavigation">true</item>
+-->
+    </style>
+    <style name="SplashBack" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="SignupBack" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/slate_grey_welcome</item>
+        <item name="android:windowBackground">@drawable/register_back_drw</item>
+    </style>
+
+    <style name="CalendarDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/bottom_select</item>
+    </style>
+
+    <style name="CalendarDialog_Red" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/red_dark_btn</item>
+    </style>
+
+    <style name="WalletsList">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+    </style>
+
+    <style name="CommonSubmitButtonLayout">
+        <item name="android:layout_marginTop">@dimen/common_submit_button_top</item>
+        <item name="android:layout_marginBottom">@dimen/common_submit_button_bottom</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--should be declare inside relative layout-->
+    <style name="CommonSubmitButtonText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="CommonSelfTradingSubmitButtonText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/small_15_size</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!--**********************common status cards****************************-->
+    <!--note - when you change height also u have to change padding -->
+    <style name="CardboxCommon" parent="CardView">
+        <item name="android:layout_width">@dimen/min_width_status</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingBottom">2dp</item>
+        <item name="cardBackgroundColor">@color/green_normal</item>
+    </style>
+<!--
+
+    <style name="CardboxCommonLong" parent="CardView">
+        <item name="android:layout_width">145dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="contentPaddingBottom">2dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/green_normal</item>
+    </style>
+-->
+
+    <style name="CardboxCommonText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/small_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--**************************************************-->
+
+    <style name="CardboxMedium" parent="CardView">
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingBottom">6dp</item>
+        <item name="contentPaddingLeft">25dp</item>
+        <item name="contentPaddingRight">25dp</item>
+        <item name="contentPaddingTop">3dp</item>
+        <item name="cardBackgroundColor">@color/green_normal</item>
+    </style>
+
+    <!--should be declare inside cardview-->
+    <style name="CardboxMediumText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/small_x_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="CardboxSmall" parent="CardView">
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingBottom">3dp</item>
+        <item name="contentPaddingLeft">18dp</item>
+        <item name="contentPaddingRight">18dp</item>
+        <item name="contentPaddingTop">2dp</item>
+        <item name="cardBackgroundColor">@color/green_normal</item>
+    </style>
+
+    <!--should be declare inside cardview-->
+    <style name="CardboxSmallText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/muli_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/very_small_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+    <!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:layout_marginLeft">8dp</item>
+         <item name="android:layout_marginRight">8dp</item>
+         <item name="android:paddingRight">0dp</item>
+         <item name="android:paddingLeft">0dp</item>-->
+
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/white</item>
+
+    </style>
+
+    <style name="AppTheme.MyAccent">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/hotel_title_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+
+    <style name="DashboardBackGround" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/slate_grey_welcome</item>
+        <item name="android:windowBackground">@drawable/dashboard_bg_drw</item>
+
+    </style>
+
+    <style name="dialogTheme">
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:windowBackground">#3E000000</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+    </style>
+
+
+    <!-- TODO: New Design Styles -->
+
+    <style name="EditTextTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/very_small_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/bg_login_edittext</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EditTextThemeQuestions">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/very_small_size</item>
+        <item name="android:background">@drawable/bg_login_edittext</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle_ranking_criteria_bg</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBarForLastMonthPlan">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle_last_month_plan_bg</item>
+    </style>
+
+    <style name="StatusButtonStyle" parent="CardView">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingBottom">2dp</item>
+        <item name="cardBackgroundColor">@color/green_normal</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/red_btn</item>
+        <item name="colorSwitchThumbNormal">#8E8E93</item>
+        <item name="android:colorForeground">#8E8E93</item>
+    </style>
+    <style name="ThemeOverlay.MySwitchCompat" parent="">
+        <item name="colorControlActivated">@color/red</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+</resources>

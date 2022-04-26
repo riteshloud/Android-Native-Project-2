@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:padding="2dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/muli_bold"
+        android:gravity="center|start"
+        android:includeFontPadding="false"
+        android:paddingRight="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rv_layout"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/languageFlag"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/drop_down" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+
+        <Spinner
+            android:id="@+id/sp_SelectLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:dropDownWidth="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:overlapAnchor="false"
+            android:paddingBottom="8dp"
+            android:popupBackground="#000000"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

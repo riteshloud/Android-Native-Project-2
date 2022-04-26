@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="colorPrimary">#221F1F</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#E9B63E</color>
+    <color name="colorAccentSelfTrade">#45AAF2</color>
+    <color name="dashboard_selected">#142922</color>
+    <color name="dashboard_unselected">#999999
+    </color>  <!--<color name="dashboard_selected">#E9B63E</color> <color name="dashboard_unselected">#FFFFFF</color> !-->
+    <color name="login_input">#6F6F78</color>
+    <color name="selected">#F5F5F5</color>
+    <color name="purple_light">#828191</color>
+    <color name="graph">#93FDE9</color>
+    <color name="blue_wallet">#3247E6</color>
+    <color name="orange_wallet">#E55711</color>
+    <color name="green_wallet">#95C622</color>
+    <color name="purple_selector">#E9B63E</color>
+    <color name="light_green">#92FBE7</color>
+    <color name="cyan">#94FFE9</color>
+    <color name="green_normal">#55CC48</color>
+    <color name="green_create_ticket">#4ECC48</color>
+    <color name="help_tab_green">#95C622</color>
+    <color name="help_tab_blue">#3247E6</color>
+    <color name="help_tab_orange">#E55711</color>
+    <color name="help_tab_purple">#736CC7</color>
+    <color name="help_tab_gray">#55556b</color>
+    <color name="trasnperent_white">#10ffffff</color>
+    <color name="product_background">#F7F6F4</color>
+    <color name="gray">#9B9A9A</color>
+    <color name="purple">#7540EE</color>
+    <color name="light_black">#010101</color>
+    <color name="view_gray">#2E2E34</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="off_white">#F7F7F9</color>
+    <color name="off_white_max">#B2F7F7F9</color>
+    <color name="dark_black">#0F0F0F</color>
+    <color name="light_gray">#A9A9BA</color>
+    <color name="hotel_title_color">#1D1D1D</color>
+    <color name="bottom_unselect">#525252</color>
+    <color name="bottom_select">#f9b90f</color>
+    <color name="filter_by">#EF4339</color>
+    <color name="pdf_background">#CCCCC9</color>
+    <color name="rank_back">#2F338A</color>
+    <color name="proof_padding_review_text">#8A6E3C</color>
+    <color name="proof_padding_card_color">#FCF8E3</color>
+
+    <color name="proof_declined_color_text">#AE504F</color>
+    <color name="proof_decline_proof_card">#F2DEDE</color>
+
+    <color name="uploaded_proof_text">#8A6E3C</color>
+    <color name="upload_proof_background">#16162B</color>
+    <color name="upload_color_card">#13132F</color>
+
+    <color name="help_support_color">#0D0D21</color>
+
+    <!--status color codes-->
+    <color name="pending">#f8ac59</color>
+    <color name="approved">#4ec724</color>
+    <color name="rejected">#ff3131</color>
+    <color name="verifying">#FF3232</color>
+    <color name="admin_added">#4ec724</color>
+    <color name="admin_reduced">#ff3131</color>
+
+    <color name="light_blue">#45AAF2</color>
+    <color name="bar_avg_risk">#434348</color>
+    <color name="self_chat_gradient_start">#083C7E</color>
+    <color name="self_chat_gradient_end">#0772E6</color>
+    <color name="chat_msg">#4A4A4A</color>
+    <color name="color_icon_gray">#C3C3C4</color>
+    <color name="bg_card_gray">#F5F5F7</color>
+    <color name="customer_support_back">#673AB7</color>
+
+    <!-- New color -->
+    <color name="red_dark_btn">#EC1111</color>
+    <color name="slate_grey_welcome">#6E7F8D</color>
+    <color name="blue_ribbon">#006DFF</color>
+    <color name="green_header_timber">#142922</color>
+    <color name="mirage_dark_black">#141A22</color>
+    <color name="green_dark_count">#17B978</color>
+    <color name="java_sky_blue">#1DAFBB</color>
+    <color name="progress_grey_bg">#EBF4F7</color>
+    <drawable name="dialog_bg">#CC000000</drawable>
+    <color name="white_30">#83FFFFFF</color>
+
+
+    <!-- TODO: Add New Design Colors -->
+    <color name="transparent_black">#70000000</color>
+    <color name="card_back_color">#0D1928</color>
+    <color name="red">#E0282E</color>
+    <color name="register_tab_color">#1BADB8</color>
+    <color name="register_back_btn_color">#00DDF9</color>
+    <color name="selected_announcement_dot">#32C5FF</color>
+    <color name="dashboard_screen_bg_color">#151618</color>
+    <color name="gray_progrssbar">#707070</color>
+    <color name="red_progressbar">#E0242F</color>
+    <color name="red_btn">#E0242F</color>
+    <color name="white_gray">#F4F4F7</color>
+    <color name="hel_support_color_bg">#1D2024</color>
+    <color name="green_bg">#00CE7D</color>
+    <color name="amount_text_color">#00DDF9</color>
+    <color name="network_text">#8D9092</color>
+    <color name="stock_back">#252D47</color>
+    <!-- TODO: Status Colors -->
+    <color name="reduced_tag">#E55541</color>
+    <color name="admin_added_tag">#E55541</color>
+    <color name="added_tag">#00CE7D</color>
+
+    <color name="approve_tag">#00CE7D</color>
+    <color name="rejected_tag">#E55541</color>
+    <color name="verifying_tag">#E55541</color>
+
+    <!-- TODO: Stock Color -->
+    <color name="stork_amount_yellow">#FDCD4A</color>
+    <color name="total_profit_color">#00CE7D</color>
+    <color name="stock_invest">#0091FF</color>
+    <color name="stock_invest_amt">#1E344D</color>
+
+    <color name="performance_color_green">#00CE7D</color>
+    <color name="performance_color_red">#E55541</color>
+
+    <color name="line_1">#FA6400</color>
+    <color name="line_2">#6DD400</color>
+    <color name="line_3">#3A96FD</color>
+    <color name="line_4">#AE504F</color>
+    <color name="line_5">#1BADB8</color>
+    <color name="line_7">#F7B500</color>
+    <color name="line_8">#8097B1</color>
+    <color name="line_9">#424B5F</color>
+    <color name="line_10">#E55541</color>
+    <integer-array name="androidcolors">
+
+        <item>@color/line_1</item>
+        <item>@color/line_2</item>
+        <item>@color/line_3</item>
+        <item>@color/line_4</item>
+        <item>@color/line_5</item>
+        <item>@color/line_7</item>
+        <item>@color/line_8</item>
+        <item>@color/line_9</item>
+        <item>@color/line_10</item>
+    </integer-array>
+    <integer-array name="barcolor">
+
+        <item>@color/light_blue</item>
+        <item>@color/red_btn</item>
+
+    </integer-array>
+
+</resources>
